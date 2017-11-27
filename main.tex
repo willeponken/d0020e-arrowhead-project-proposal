@@ -1,0 +1,135 @@
+% Using A4 paper as standard, 15pt high header and two sided documents.
+\documentclass[a4paper,15pt,twoside]{article}
+
+% These are the packages that are usually used, remove unused yourself.
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{dirtree}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{csvsimple}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{listings}
+\usepackage{upgreek}
+\usepackage[american]{circuitikz}
+\usepackage[titletoc,title]{appendix}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{verbatim}
+
+% Standard colors for the code syntax highlighting.
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\definecolor{pggray}{rgb}{0.46,0.45,0.48}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% Define author information
+\newcommand{\authors}{Edvin Sladic, Olof Enekvist, Niclas Vretborn, Robin Persson, Ridge Petterson, William Wennerström}
+\newcommand{\authorsinfo}{
+    Edvin Sladic^1 \thanks{$^1$E-post: \texttt{edvsla-5@student.ltu.se}} \\
+    Olof Enekvist^2 \thanks{$^2$E-post: \texttt{oloene-4@student.ltu.se}} \\
+    Niclas Vretborn^3 \thanks{$^3$E-post: \texttt{nicvre-3@student.ltu.se}} \\
+    Robin Persson^4 \thanks{$^4$E-post: \texttt{robper-4@student.ltu.se}} \\
+    Ridge Petterson^5 \thanks{$^5$E-post: \texttt{ridpet-5@student.ltu.se}} \\
+    William Wennerström^6 \thanks{$^6$E-post: \texttt{wenwil-5@student.ltu.se}}
+}
+
+% Define course information
+\newcommand{\coursename}{Project in Computer Science}
+\newcommand{\coursecode}{D0020E}
+
+% Define project name
+\newcommand{\projectname}{Arrowhead Project Proposal}
+
+% Define information about the school/university
+\newcommand{\schoolinfo}{Institutionen för system- och rymdteknik \\
+                         Luleå tekniska universitet \\
+                         971 87 Luleå, Sverige
+}
+
+% Define hitler rule
+\newcommand{\hitlerrule}{\midrule\midrule}
+
+% Define Y colymntype
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% Header for each page (except first)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\authors}
+\fancyhead[RE,LO]{\coursecode}
+\fancyfoot[L,RO]{\thepage}
+
+\lstset{showspaces=false,
+        showtabs=false,
+        breaklines=true,
+        showstringspaces=false,
+        breakatwhitespace=false,
+        commentstyle=\color{pgreen},
+        keywordstyle=\color{pblue},
+        stringstyle=\color{pred},
+        basicstyle=\ttfamily,
+        captionpos=t,
+        basicstyle=\scriptsize,
+        numbers=left,
+        numbersep=9pt,
+        numberstyle=\scriptsize\color{pggray}, 
+        frame=L,
+        rulecolor=\color{black},
+        tabsize=2,
+        moredelim=[il][\textcolor{pgrey}]{\$\$},
+        moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\title{\coursename{} --- \coursecode{} \break{}
+  \projectname{}
+  \author{\authorsinfo{}} \break{}
+  \bigskip{} \break{}
+  \schoolinfo{}}
+\renewcommand\footnotemark{}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+
+\begin{comment}
+Deploy Docker container to Amazon AWS: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
+\end{comment}
+
+\tableofcontents
+\clearpage
+\section{Introduction}
+Dev cloud service for AH
+\subsection{Background}
+\textbf{Note:} \textit{Incoming word bajs...} (William kan inte stå för det här)
+
+The Arrowhead Framework is in need of a complete orchestration system. This system needs to be highly automated where a automatic deployment strategy should be designed. 
+
+This automated deployment should be performed towards both global and local clouds. Examples of current providers of global clouds are Amazon AWS and Microsoft Azure. These providers have implemented API's for automation. 
+
+Local clouds can potentially be a more complex issue of implementation if they are in-house designed. These clouds can however also be hosted on large cloud providers too using isolation, and in this case the design could be simplified.
+
+WHAT HAS BEEN DONE ? ... 
+
+\subsection{Assignment}
+Work with AH orchestration
+\subsection{Problem description}
+Dev cloud deployment for AH orchestration
+\subsection{Demarcation}
+Designing the entire orchestration system is to much work for this project. Instead, the project is limited to the development of the cloud service deployment.
+
+\section{System design}
+
+\end{document}
